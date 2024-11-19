@@ -55,6 +55,8 @@ body {
 
 /* clock k andr jo hamari point hai ya dot kehden dot hai jisme sare hour min sec ki suiyan hain us point ko height width deke border radius se circle kiya hai and z index 2 ki madad se usko uper kiya hai Q k by default sabka zindex 1 hota hai iska 2 hogya to sbke uper ajayega  */
 .clock .point {
+     height: 15px;
+/*     width: 5px; */
     background: #404040;
     border-radius: 50%;
     z-index: 2;
