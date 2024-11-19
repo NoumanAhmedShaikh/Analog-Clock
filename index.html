@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task - Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="point"></div>
+        <div class="point2"></div>
+        <div class="indicators">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="seconds">
+            <div class="sec"></div>
+        </div>
+        <div class="minutes">
+            <div class="min"></div>
+        </div>
+        <div class="hours">
+            <div class="hr"></div>
+        </div>
+    </div>
+    <script>
+        const sec = document.querySelector(".sec");
+        const min = document.querySelector(".min");
+        const hr = document.querySelector(".hr");
+        setInterval(function () {
+            let time = new Date();
+            let secs = time.getSeconds() * 6;
+            let mins = time.getMinutes() * 6;
+            let hrs = time.getHours() * 30;
+            sec.style.transform = `rotate(${secs}deg)`;
+            min.style.transform = `rotate(${mins}deg)`;
+            hr.style.transform = `rotate(${hrs + (mins / 12)}deg)`;
+        });
+    </script>
+</body>
+
+</html>
